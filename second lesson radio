@@ -1,0 +1,87 @@
+namespace _2radio
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {// radiobuton 1 seçildi mi seçimden kaldırıldı mı ?
+            if (radioButton1.Checked) label1.Text = "A) Şıkkı seçildi";
+            else label2.Text = "A) Şıkkı sçeimden çıkarıldı";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {// radiobuton 2 seçildi mi seçimden kaldırıldı mı ?
+            if (radioButton2.Checked) label1.Text = "B) Şıkkı seçildi";
+            else label2.Text = "B) Şıkkı sçeimden çıkarıldı";
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {// radiobuton 3 seçildi mi seçimden kaldırıldı mı ?
+            if (radioButton3.Checked) label1.Text = "C) Şıkkı seçildi";
+            else label2.Text = "C) Şıkkı sçeimden çıkarıldı";
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {// radiobuton 4 seçildi mi seçimden kaldırıldı mı ?
+            if (radioButton4.Checked) label1.Text = "D) Şıkkı seçildi";
+            else label2.Text = "D) Şıkkı sçeimden çıkarıldı";
+
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {// radiobuton 5 seçildi mi seçimden kaldırıldı mı ?
+            if (radioButton5.Checked) label1.Text = "E) Şıkkı seçildi";
+            else label2.Text = "E) Şıkkı sçeimden çıkarıldı";
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {// form yüklenirken grupbox ve radio butonları ayarlayalım
+            groupBox1.Text = "Medeni Durum";
+            groupBox1.ForeColor = Color.WhiteSmoke;
+            groupBox1.BackColor = Color.PaleTurquoise;
+            radioButton6.Text = "Bekar";
+            radioButton7.Text = "Evli";
+            radioButton6.Checked = true;
+            //Groupbox2 gizlenmiş olsun, evli rb seçilince görünür olsun
+            groupBox2.Text = "Çocuk Sayısı";
+            groupBox2.ForeColor = Color.WhiteSmoke;
+            groupBox2.BackColor = Color.PaleTurquoise;
+            groupBox2.Visible = false;//görünmez
+            groupBox2.Enabled= false;// etkisiz
+            
+            radioButton8.Text = "Çocuk Yok";
+            radioButton9.Text = "1 Çocuk";
+            radioButton10.Text = "2 Çocuk";
+            radioButton11.Text = "2'den Fazla Çocuk";
+            radioButton8.Checked = true;
+            //Panelin Labeli
+            label3.text = "Aşı Takvimindeki Hastalıklar";
+            Panel1.Visible = true;
+
+            
+        }
+        
+private void radioButton7_CheckedChanged_1(object sender, EventArgs e)
+        {// evli yazan rb7 seçildiyse groupbx2 yi etkin ve görünür kıl
+            if (radioButton7.Checked)
+            {
+                groupBox2.Enabled = true;
+                groupBox2.Visible = true;
+
+            }
+            else
+            {
+                groupBox2.Enabled = false;
+                groupBox2.Visible = false;
+            }
+
+        }
+    }
+}
